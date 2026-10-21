@@ -1,0 +1,6 @@
+{
+  "name": "Smart Water Monitoring System",
+  "description": "CIV104 Environmental Science and Sustainability project website on the Smart Water Monitoring System by Sushanth, Rohan, Jilani, Adthiya, Soyug, and Rahul.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
