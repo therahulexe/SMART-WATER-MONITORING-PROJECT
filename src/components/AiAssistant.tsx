@@ -36,7 +36,7 @@ export const AiAssistant: React.FC = () => {
     {
       id: 'welcome',
       role: 'model',
-      text: "Hello! I am your Smart Water Monitoring Technical Advisor. You can ask me questions about flow sensor mechanics, NSF/ANSI 61 potable water standards, pulse-interrupt calculations, Arduino/Python code, or building-scale IoT deployment.",
+      text: "Hello! I am your NMIT Water Monitoring Technical Advisor. You can ask me questions about flow sensor mechanics, NSF/ANSI 61 potable water standards, pulse-interrupt calculations, Arduino/Python code, or building-scale IoT deployment.",
       timestamp: 'Just now'
     }
   ]);
@@ -165,7 +165,7 @@ export const AiAssistant: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-400 truncate">
-                  CIV104 Water Monitoring Technical Assistant
+                  NMIT Water Monitoring Technical Assistant
                 </p>
               </div>
             </div>

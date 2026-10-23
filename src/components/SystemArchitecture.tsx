@@ -11,8 +11,12 @@ import {
   Layers,
   Terminal,
   Cpu,
-  ArrowRight
+  ArrowRight,
+  Database,
+  Radio,
+  MonitorCheck
 } from 'lucide-react';
+import telemetryDiagramImg from '../assets/images/telemetry_flow_diagram_1792774566708.jpg';
 
 export const SystemArchitecture: React.FC = () => {
   const [activeCodeTab, setActiveCodeTab] = useState<'arduino' | 'python'>('arduino');
@@ -31,8 +35,8 @@ export const SystemArchitecture: React.FC = () => {
     <section id="architecture" className="py-16 bg-slate-50 border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="mb-12">
-          <div className="text-xs font-semibold text-cyan-700 tracking-wider uppercase mb-1">
+        <div className="mb-10">
+          <div className="text-xs font-semibold text-sky-700 tracking-wider uppercase mb-1">
             Section 3 &amp; 4
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
@@ -43,15 +47,73 @@ export const SystemArchitecture: React.FC = () => {
           </p>
         </div>
 
+        {/* Isometric Architecture Blueprint Graphic */}
+        <div className="mb-12 bg-white rounded-2xl border border-slate-200/90 shadow-sm overflow-hidden">
+          <div className="p-4 sm:p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-gradient-to-r from-slate-50 to-white">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200/80 flex items-center justify-center text-sky-700">
+                <Layers className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                  Campus Telemetry Schematic &amp; Hardware Interconnect
+                </h3>
+                <span className="text-xs text-slate-500 font-medium">
+                  Continuous water distribution pipeline with Hall-effect sensing &amp; serial monitoring
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 self-start sm:self-auto text-xs font-mono text-slate-500">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span>Full Signal Loop: Sensor → MCU → UART → Console</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-16/9 max-h-[480px] w-full bg-slate-950 overflow-hidden group">
+            <img
+              src={telemetryDiagramImg}
+              alt="Smart Water Monitoring Isometric System Diagram"
+              className="w-full h-full object-cover object-center group-hover:scale-101 transition-transform duration-500"
+            />
+            {/* Soft gradient edge */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+
+            {/* Schematic HUD Overlay Callouts */}
+            <div className="absolute bottom-3 left-3 right-3 sm:left-4 sm:right-4 flex flex-wrap items-center justify-between gap-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 rounded-xl p-3 text-xs text-slate-200">
+              <div className="flex items-center gap-2">
+                <Database className="w-3.5 h-3.5 text-sky-400" />
+                <span className="font-semibold text-white">1. Reservoir Supply</span>
+                <span className="text-slate-400 hidden md:inline">→ Gravity / mains header pipe</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Radio className="w-3.5 h-3.5 text-yellow-400" />
+                <span className="font-semibold text-white">2. YF-S201 Rotor</span>
+                <span className="text-slate-400 hidden md:inline">→ 450 pulses/liter calibration</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Cpu className="w-3.5 h-3.5 text-indigo-400" />
+                <span className="font-semibold text-white">3. Arduino Uno R3</span>
+                <span className="text-slate-400 hidden md:inline">→ Interrupt Pin 2</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MonitorCheck className="w-3.5 h-3.5 text-emerald-400" />
+                <span className="font-semibold text-white">4. Python Telemetry</span>
+                <span className="text-slate-400 hidden md:inline">→ 9600 Baud threshold alerts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* 3. How the System Works: 4-Step Interactive Pipeline */}
         <div className="mb-14">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <Layers className="w-5 h-5 text-cyan-700" />
+              <Layers className="w-5 h-5 text-sky-700" />
               <span>3. How the System Works</span>
             </h3>
-            <span className="text-xs text-slate-500">
-              Click any stage to inspect technical mechanics
+            <span className="text-xs text-slate-500 font-medium">
+              Click any stage below to inspect technical mechanics
             </span>
           </div>
 
@@ -65,15 +127,15 @@ export const SystemArchitecture: React.FC = () => {
                   onClick={() => setActiveStep(step.stepNumber)}
                   className={`text-left p-4 rounded-xl border transition-all cursor-pointer ${
                     isSelected
-                      ? 'bg-white border-cyan-600 ring-2 ring-cyan-600/20 shadow-xs'
-                      : 'bg-white/70 border-slate-200 hover:border-slate-300 hover:bg-white'
+                      ? 'bg-white border-sky-600 ring-2 ring-sky-600/20 shadow-xs'
+                      : 'bg-white/80 border-slate-200/90 hover:border-slate-300 hover:bg-white'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span
-                      className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
+                      className={`text-xs font-mono font-bold px-2 py-0.5 rounded-md ${
                         isSelected
-                          ? 'bg-cyan-100 text-cyan-800'
+                          ? 'bg-sky-100 text-sky-800'
                           : 'bg-slate-100 text-slate-600'
                       }`}
                     >
@@ -98,10 +160,10 @@ export const SystemArchitecture: React.FC = () => {
           {(() => {
             const current = HOW_IT_WORKS_STEPS.find((s) => s.stepNumber === activeStep)!;
             return (
-              <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-xs">
+              <div className="p-6 bg-white border border-slate-200/90 rounded-xl shadow-xs">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-slate-100">
                   <div>
-                    <div className="text-xs font-semibold text-cyan-700 tracking-wide uppercase">
+                    <div className="text-xs font-semibold text-sky-700 tracking-wide uppercase">
                       Pipeline Phase 0{current.stepNumber}
                     </div>
                     <h4 className="text-lg font-bold text-slate-900">
@@ -118,7 +180,7 @@ export const SystemArchitecture: React.FC = () => {
                     <h5 className="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-2">
                       Report Statement
                     </h5>
-                    <p className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 font-medium">
+                    <p className="p-3 bg-slate-50 border border-slate-200/80 rounded-lg text-slate-800 font-medium">
                       {current.stepNumber}. {current.description}
                     </p>
                   </div>
@@ -148,7 +210,7 @@ export const SystemArchitecture: React.FC = () => {
             </p>
           </div>
 
-          <div className="overflow-x-auto bg-white border border-slate-200 rounded-xl shadow-2xs">
+          <div className="overflow-x-auto bg-white border border-slate-200/90 rounded-xl shadow-2xs">
             <table className="w-full text-left text-sm">
               <thead className="bg-slate-100/75 border-b border-slate-200 text-xs font-semibold text-slate-700">
                 <tr>
@@ -185,7 +247,7 @@ export const SystemArchitecture: React.FC = () => {
           {/* Code Header Bar */}
           <div className="flex flex-wrap items-center justify-between gap-4 px-5 py-3.5 bg-slate-950 border-b border-slate-800">
             <div className="flex items-center gap-2">
-              <Terminal className="w-4 h-4 text-cyan-400" />
+              <Terminal className="w-4 h-4 text-sky-400" />
               <span className="text-xs font-semibold text-slate-200 tracking-wider uppercase">
                 Implementation Code
               </span>
@@ -197,7 +259,7 @@ export const SystemArchitecture: React.FC = () => {
                   onClick={() => setActiveCodeTab('arduino')}
                   className={`px-3 py-1 font-medium rounded-md transition-colors cursor-pointer ${
                     activeCodeTab === 'arduino'
-                      ? 'bg-cyan-700 text-white font-semibold'
+                      ? 'bg-sky-600 text-white font-semibold'
                       : 'text-slate-400 hover:text-slate-200'
                   }`}
                 >
@@ -207,7 +269,7 @@ export const SystemArchitecture: React.FC = () => {
                   onClick={() => setActiveCodeTab('python')}
                   className={`px-3 py-1 font-medium rounded-md transition-colors cursor-pointer ${
                     activeCodeTab === 'python'
-                      ? 'bg-cyan-700 text-white font-semibold'
+                      ? 'bg-sky-600 text-white font-semibold'
                       : 'text-slate-400 hover:text-slate-200'
                   }`}
                 >
@@ -236,7 +298,7 @@ export const SystemArchitecture: React.FC = () => {
           </div>
 
           {/* Code Viewer Body */}
-          <div className="p-5 font-mono text-xs overflow-x-auto max-h-[380px] bg-slate-950 text-slate-300 leading-relaxed selection:bg-cyan-900 selection:text-white">
+          <div className="p-5 font-mono text-xs overflow-x-auto max-h-[380px] bg-slate-950 text-slate-300 leading-relaxed selection:bg-sky-900 selection:text-white">
             <pre>
               <code>
                 {activeCodeTab === 'arduino'
@@ -254,7 +316,7 @@ export const SystemArchitecture: React.FC = () => {
                 : 'Host script reads COM3 at 9600 baud, checks thresholds (Normal <= 6, Warning 6-10, High > 10)'}
             </span>
             <span className="hidden sm:inline text-slate-500 font-mono">
-              CIV104 Implementation Guide
+              NMIT Implementation Guide
             </span>
           </div>
         </div>

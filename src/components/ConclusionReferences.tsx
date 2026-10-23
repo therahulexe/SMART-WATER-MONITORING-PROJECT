@@ -95,7 +95,7 @@ export const ConclusionReferences: React.FC<ConclusionReferencesProps> = ({ onOp
 
                 <a
                   href={PROJECT_METADATA.pdfPath}
-                  download="Smart_Water_Monitoring_Guide_Report.pdf"
+                  download="NMIT_Water_Monitoring_Guide_Report.pdf"
                   className="flex items-center gap-1.5 px-3.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg text-xs transition-colors"
                 >
                   <Download className="w-3.5 h-3.5" />

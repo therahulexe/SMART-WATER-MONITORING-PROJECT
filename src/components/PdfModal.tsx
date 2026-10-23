@@ -18,13 +18,17 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, onClose }) => {
         {/* Modal Top Header */}
         <div className="px-5 py-3.5 bg-slate-900 text-white flex items-center justify-between gap-4 border-b border-slate-800">
           <div className="flex items-center gap-2.5 min-w-0">
-            <FileText className="w-5 h-5 text-cyan-400 shrink-0" />
+            <img
+              src="/nmit-logo.jpeg"
+              alt="NMIT Logo"
+              className="h-10 sm:h-11 w-auto object-contain rounded-lg bg-white p-1 border border-slate-700 shadow-xs"
+            />
             <div className="truncate">
               <span className="font-bold text-sm block truncate">
-                Smart_Water_Monitoring_Implementation_Guide.pdf
+                NMIT_Water_Monitoring_Implementation_Guide.pdf
               </span>
               <span className="text-[11px] text-slate-400 font-mono">
-                CIV104 Environmental Science and Sustainability · Implementation Guide
+                NMIT Environmental Science and Sustainability · Implementation Guide
               </span>
             </div>
           </div>
@@ -56,7 +60,7 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, onClose }) => {
 
             <a
               href={PROJECT_METADATA.pdfPath}
-              download="Smart_Water_Monitoring_Guide.pdf"
+              download="NMIT_Water_Monitoring_Guide.pdf"
               className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg transition-colors"
               title="Download PDF"
             >
@@ -126,19 +130,28 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, onClose }) => {
                 <div className="text-xs font-semibold text-cyan-700 uppercase tracking-widest">
                   Page 1 of 3
                 </div>
+                <div className="flex justify-center mb-3">
+                  <div className="p-3 bg-white rounded-2xl border border-slate-200 shadow-xs hover:scale-105 transition-transform duration-200">
+                    <img
+                      src="/nmit-logo.jpeg"
+                      alt="NMIT Logo"
+                      className="h-20 sm:h-24 w-auto object-contain"
+                    />
+                  </div>
+                </div>
                 <div className="text-sm font-semibold text-cyan-800 uppercase tracking-wide">
                   ENGINEERING IMPLEMENTATION GUIDE
                 </div>
                 <h2 className="text-2xl font-extrabold text-slate-900">
-                  Smart Water Monitoring System
+                  NMIT Water Monitoring System
                 </h2>
                 <div className="text-sm text-slate-600 font-medium">
-                  Environmental Science and Sustainability (CIV104)
+                  Environmental Science and Sustainability
                 </div>
                 <div className="max-w-md mx-auto p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs">
                   <span className="font-bold text-slate-700 block mb-1">Group Members</span>
                   <span className="text-slate-900 font-medium">
-                    Sushanth, Rohan, Jilani, Adthiya, Soyug, Rahul
+                    Rahul (Admin &amp; Lead Developer), Sushanth, Rohan, Jilani, Adthiya, Soyug
                   </span>
                 </div>
                 <p className="text-sm italic text-slate-600">
@@ -248,6 +261,10 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, onClose }) => {
                       <span>Member</span>
                       <span>Task</span>
                     </div>
+                    <div className="grid grid-cols-2 p-2 border-b border-slate-100 bg-cyan-50/50">
+                      <span className="font-bold text-cyan-900">Rahul (Admin &amp; Lead Developer)</span>
+                      <span className="font-medium text-slate-900">System Administrator &amp; Lead Developer of this website; report QA</span>
+                    </div>
                     <div className="grid grid-cols-2 p-2 border-b border-slate-100">
                       <span className="font-semibold">Sushanth</span>
                       <span>Coordinate the group</span>
@@ -264,13 +281,9 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, onClose }) => {
                       <span className="font-semibold">Adthiya</span>
                       <span>Run the Python program</span>
                     </div>
-                    <div className="grid grid-cols-2 p-2 border-b border-slate-100">
+                    <div className="grid grid-cols-2 p-2">
                       <span className="font-semibold">Soyug</span>
                       <span>Collect notes and help with the presentation</span>
-                    </div>
-                    <div className="grid grid-cols-2 p-2">
-                      <span className="font-semibold">Rahul</span>
-                      <span>Review the report and help prepare the presentation</span>
                     </div>
                   </div>
                 </div>
@@ -278,14 +291,14 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, onClose }) => {
                 <div>
                   <h3 className="font-bold text-slate-900 text-base mb-1">9. Conclusion</h3>
                   <p className="leading-relaxed">
-                    The Smart Water Monitoring System is a simple idea for reducing unnoticed water wastage. A sensor and Arduino can measure flow, while a Python program can show a warning when flow stays unusually high. The system would need to be tested before we can say how well it works, but it shows how technology can support careful water use.
+                    The NMIT Water Monitoring System is a simple idea for reducing unnoticed water wastage. A sensor and Arduino can measure flow, while a Python program can show a warning when flow stays unusually high. The system would need to be tested before we can say how well it works, but it shows how technology can support careful water use.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-bold text-slate-900 text-base mb-1">References</h3>
                   <ol className="list-decimal list-inside space-y-1 pl-2 text-xs">
-                    <li>LA-2 Handout, Environmental Science and Sustainability (CIV104), provided for the assignment.</li>
+                    <li>NMIT Project Guide Handout, Environmental Science and Sustainability, provided for the assignment.</li>
                     <li>NSSKC Visit Handout, provided for the assignment.</li>
                   </ol>
                 </div>
@@ -298,7 +311,7 @@ export const PdfModal: React.FC<PdfModalProps> = ({ isOpen, onClose }) => {
         <div className="px-5 py-3 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-            <span>Complete verified transcript of CIV104 Implementation Guide</span>
+            <span>Complete verified transcript of NMIT Implementation Guide</span>
           </div>
           <button
             onClick={onClose}

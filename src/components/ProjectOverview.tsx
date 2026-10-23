@@ -8,7 +8,7 @@ export const ProjectOverview: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="mb-10">
-          <div className="text-xs font-semibold text-cyan-700 tracking-wider uppercase mb-1">
+          <div className="text-xs font-semibold text-sky-700 tracking-wider uppercase mb-1">
             Section 1 &amp; 2
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
@@ -24,7 +24,7 @@ export const ProjectOverview: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl">
               <div className="flex items-center gap-2 mb-3 text-slate-900 font-semibold text-base">
-                <HelpCircle className="w-5 h-5 text-cyan-700 shrink-0" />
+                <HelpCircle className="w-5 h-5 text-sky-700 shrink-0" />
                 <h3>1. Introduction</h3>
               </div>
               
@@ -74,26 +74,26 @@ export const ProjectOverview: React.FC = () => {
 
           {/* Right Column: 2. Aim & Core Hypothesis (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 bg-cyan-900 text-white rounded-xl shadow-xs">
-              <div className="flex items-center gap-2 mb-3 font-semibold text-base text-cyan-200">
-                <Target className="w-5 h-5 text-cyan-300 shrink-0" />
+            <div className="p-6 bg-slate-900 text-white rounded-xl shadow-md border border-slate-800">
+              <div className="flex items-center gap-2 mb-3 font-semibold text-base text-sky-400">
+                <Target className="w-5 h-5 text-sky-400 shrink-0" />
                 <h3>2. Aim</h3>
               </div>
               <p className="text-base font-medium text-white leading-relaxed mb-6">
                 "{PROJECT_METADATA.aim}"
               </p>
 
-              <div className="space-y-3 pt-4 border-t border-cyan-800 text-xs sm:text-sm text-cyan-100">
+              <div className="space-y-3 pt-4 border-t border-slate-800 text-xs sm:text-sm text-slate-300">
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-300 mt-0.5 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 mt-0.5 shrink-0" />
                   <span>Demonstrate sensor hardware telemetry without expensive industrial flow instrumentation.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-300 mt-0.5 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 mt-0.5 shrink-0" />
                   <span>Bridge microcontrollers (Arduino) with standard desktop software (Python) via USB serial.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-300 mt-0.5 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 mt-0.5 shrink-0" />
                   <span>Empower users with clear, actionable warnings before wastage causes structural or environmental damage.</span>
                 </div>
               </div>

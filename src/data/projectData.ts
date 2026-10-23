@@ -1,7 +1,7 @@
 /**
  * Project data extracted directly from the official Project Report:
- * "Smart Water Monitoring System"
- * Course: Environmental Science and Sustainability (CIV104)
+ * "NMIT Water Monitoring System"
+ * Course: Environmental Science and Sustainability
  * Architecture & Engineering Implementation Guide
  */
 
@@ -41,10 +41,10 @@ export interface FaqItem {
 }
 
 export const PROJECT_METADATA = {
-  courseCode: 'CIV104',
+  courseCode: 'NMIT',
   courseName: 'Environmental Science and Sustainability',
   assignment: 'Engineering Implementation Guide',
-  title: 'Smart Water Monitoring System',
+  title: 'NMIT Water Monitoring System',
   tagline: 'A simple idea to help notice unnecessary water flow.',
   pdfPath: '/assets/aistudio/LA2_Smart_Water_Monitoring_Simple_Report_b991d4db.pdf',
   introduction:
@@ -52,11 +52,11 @@ export const PROJECT_METADATA = {
   aim:
     'To show how a flow sensor, Arduino and a simple Python program can help users notice unusually high water flow.',
   conclusion:
-    'The Smart Water Monitoring System is a simple idea for reducing unnoticed water wastage. A sensor and Arduino can measure flow, while a Python program can show a warning when flow stays unusually high. The system would need to be tested before we can say how well it works, but it shows how technology can support careful water use.',
+    'The NMIT Water Monitoring System is a simple idea for reducing unnoticed water wastage. A sensor and Arduino can measure flow, while a Python program can show a warning when flow stays unusually high. The system would need to be tested before we can say how well it works, but it shows how technology can support careful water use.',
   references: [
     {
       id: 1,
-      title: 'CIV104 Environmental Science and Sustainability Project Guide Handout',
+      title: 'NMIT Environmental Science and Sustainability Project Guide Handout',
       note: 'Provided for the academic assignment guidelines and project framing.'
     },
     {
@@ -173,6 +173,12 @@ export const WARNING_LEVELS: WarningLevel[] = [
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
+    name: 'Rahul',
+    role: 'System Administrator & Lead Developer',
+    task: 'System Administrator & Lead Developer of this website; report QA',
+    dutySummary: 'Engineered the full-stack web monitoring platform, role-based access control, interactive telemetry simulator, and lead developer of this website.'
+  },
+  {
     name: 'Sushanth',
     role: 'Project Coordinator',
     task: 'Coordinate the group',
@@ -201,12 +207,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Documentation & Presentation',
     task: 'Collect notes and help with the presentation',
     dutySummary: 'Synthesized lab notes, cataloged NSSKC visit observations, and organized visual slides for class review.'
-  },
-  {
-    name: 'Rahul',
-    role: 'Quality Assurance & Report Review',
-    task: 'Review the report and help prepare the presentation',
-    dutySummary: 'Critiqued document formatting, proofread technical descriptions, and prepared presentation delivery.'
   }
 ];
 
@@ -378,8 +378,8 @@ export const FAQ_ITEMS: FaqItem[] = [
 ];
 
 export const ARDUINO_CODE_SNIPPET = `/*
- * Smart Water Monitoring System - Arduino Firmware
- * Environmental Science and Sustainability (CIV104) Implementation Guide
+ * NMIT Water Monitoring System - Arduino Firmware
+ * Environmental Science and Sustainability Implementation Guide
  * Sensor: YF-S201 Flow Sensor (Interrupt on Pin 2)
  */
 
@@ -427,8 +427,8 @@ void loop() {
 }`;
 
 export const PYTHON_CODE_SNIPPET = `"""
-Smart Water Monitoring System - Host Python Visualizer & Alert Program
-Environmental Science and Sustainability (CIV104) Implementation Guide
+NMIT Water Monitoring System - Host Python Visualizer & Alert Program
+Environmental Science and Sustainability Implementation Guide
 Reads Arduino serial data, monitors threshold limits, and alerts user.
 """
 
@@ -453,7 +453,7 @@ def classify_flow(rate):
 
 def main():
     print("=" * 60)
-    print("Smart Water Monitoring System - CIV104 Guide")
+    print("NMIT Water Monitoring System Guide")
     print("Connecting to Arduino on", SERIAL_PORT)
     print("=" * 60)
     

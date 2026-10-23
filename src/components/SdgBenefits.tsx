@@ -8,7 +8,7 @@ export const SdgBenefits: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="mb-10">
-          <div className="text-xs font-semibold text-cyan-700 tracking-wider uppercase mb-1">
+          <div className="text-xs font-semibold text-sky-700 tracking-wider uppercase mb-1">
             Section 6
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
@@ -24,9 +24,9 @@ export const SdgBenefits: React.FC = () => {
           {BENEFITS.slice(0, 3).map((benefit, idx) => (
             <div
               key={idx}
-              className="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-3"
+              className="p-6 bg-slate-50 border border-slate-200/90 rounded-xl space-y-3"
             >
-              <div className="w-8 h-8 rounded-lg bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold font-mono text-sm">
+              <div className="w-8 h-8 rounded-lg bg-sky-100 text-sky-800 flex items-center justify-center font-bold font-mono text-sm">
                 0{idx + 1}
               </div>
               <h3 className="text-base font-bold text-slate-900">
@@ -35,8 +35,8 @@ export const SdgBenefits: React.FC = () => {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 {benefit.description}
               </p>
-              <div className="pt-2 text-xs font-medium text-cyan-800 flex items-start gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0 mt-0.5" />
+              <div className="pt-2 text-xs font-medium text-sky-800 flex items-start gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-sky-600 shrink-0 mt-0.5" />
                 <span>{benefit.impact}</span>
               </div>
             </div>
@@ -44,11 +44,11 @@ export const SdgBenefits: React.FC = () => {
         </div>
 
         {/* UN Sustainable Development Goals Deep Dive */}
-        <div className="p-8 bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950 text-white rounded-2xl shadow-sm">
+        <div className="p-8 bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950 text-white rounded-2xl shadow-sm border border-slate-800">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-slate-800">
             <div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-1">
-                <Globe className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center gap-2 text-xs font-semibold text-sky-400 uppercase tracking-wider mb-1">
+                <Globe className="w-4 h-4 text-sky-400" />
                 <span>UN Agenda 2030 Alignment</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-white">
@@ -123,7 +123,7 @@ export const SdgBenefits: React.FC = () => {
               </span>
             </div>
             <span className="font-mono text-cyan-300">
-              CIV104 Environmental Science
+              NMIT Environmental Science &amp; Sustainability
             </span>
           </div>
         </div>

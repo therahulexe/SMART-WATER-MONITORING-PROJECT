@@ -8,7 +8,7 @@ export const WarningLevels: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="mb-10">
-          <div className="text-xs font-semibold text-cyan-700 tracking-wider uppercase mb-1">
+          <div className="text-xs font-semibold text-sky-700 tracking-wider uppercase mb-1">
             Section 5
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
@@ -83,8 +83,8 @@ export const WarningLevels: React.FC = () => {
 
         {/* Calibration & Fluid Dynamics Deep Dive */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-5 bg-white border border-slate-200 rounded-xl space-y-2">
-            <div className="flex items-center gap-2 text-xs font-bold text-cyan-700 uppercase tracking-wider">
+          <div className="p-5 bg-white border border-slate-200/90 rounded-xl space-y-2 shadow-2xs">
+            <div className="flex items-center gap-2 text-xs font-bold text-sky-700 uppercase tracking-wider">
               <Sliders className="w-4 h-4" />
               <span>Sensor Calibration Math</span>
             </div>

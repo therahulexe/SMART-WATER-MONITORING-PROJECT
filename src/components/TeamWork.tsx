@@ -3,7 +3,7 @@ import { TEAM_MEMBERS } from '../data/projectData';
 import { Users, CheckCircle2, Award } from 'lucide-react';
 
 export const TeamWork: React.FC = () => {
-  const [selectedMember, setSelectedMember] = useState<string>('Sushanth');
+  const [selectedMember, setSelectedMember] = useState<string>('Rahul');
 
   const currentMember =
     TEAM_MEMBERS.find((m) => m.name === selectedMember) || TEAM_MEMBERS[0];
@@ -20,7 +20,7 @@ export const TeamWork: React.FC = () => {
             8. Team Work &amp; Project Contributions
           </h2>
           <p className="text-slate-600 mt-2 max-w-2xl text-sm sm:text-base">
-            Collaborative division of labor across group members as documented in the official CIV104 project submission.
+            Collaborative division of labor across group members as documented in the official NMIT project submission.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export const TeamWork: React.FC = () => {
 
               <div className="flex items-center gap-1 text-xs text-slate-500 font-mono">
                 <Award className="w-3.5 h-3.5 text-cyan-600" />
-                <span>CIV104 Group</span>
+                <span>NMIT Project Group</span>
               </div>
             </div>
 
